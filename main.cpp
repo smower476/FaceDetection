@@ -4,7 +4,9 @@
 #include <opencv2/imgproc.hpp>
 #include <opencv2/objdetect.hpp>
 #include <iostream>
- 
+#include <filesystem>
+
+
 using namespace std;
 using namespace cv;
  
@@ -12,8 +14,10 @@ int main(int argc, char **argv){
     // Create a VideoCapture object and open the input file
     // If the input is the web camera, pass 0 instead of the video file name
     VideoCapture cap(argv[1]); 
+    
     CascadeClassifier facedetect;
-    facedetect.load("/home/chicken/Downloads/FaceDetection/haarcascade_frontalface_default.xml");
+    facedetect.load("\\haarcascades\\haarcascade_frontalface_default.xml");
+
     // Check if camera opened successfully
     if(!cap.isOpened()){
       cout << "Error opening video stream or file" << endl;
