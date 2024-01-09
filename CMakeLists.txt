@@ -3,19 +3,11 @@ project(FaceDetection)
 
 set(CMAKE_CXX_STANDARD 17)
 
-if (UNIX)
-	find_package(OpenCV REQUIRED) 
-	include_directories(${OpenCV_INCLUDE_DIRS}) # not needed for opencv>=4.0
-	add_executable(main main.cpp)
-	target_link_libraries(main ${OpenCV_LIBS})
-	configure_file(haarcascades/haarcascade_frontalface_default.xml ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
-endif (UNIX)
 
-if (WIN32)
-    find_package(OpenCV REQUIRED) 
-	include_directories(${OpenCV_INCLUDE_DIRS}) # not needed for opencv>=4.0
-	add_executable(main main.cpp)
-	target_link_libraries(main ${OpenCV_LIBS})
-	configure_file(haarcascades/haarcascade_frontalface_default.xml ${CMAKE_CURRENT_BINARY_DIR} COPYONLY)
+find_package(OpenCV REQUIRED)
+include_directories(${OpenCV_INCLUDE_DIRS}) # not needed for opencv>=4.0
+add_executable(main main.cpp)
+target_link_libraries(main ${OpenCV_LIBS})
 
-endif (WIN32)
+file(GLOB HAARCASCADES_FILES "${CMAKE_CURRENT_SOURCE_DIR}/haarcascades/*")
+file(COPY ${HAARCASCADES_FILES} DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/haarcascades)

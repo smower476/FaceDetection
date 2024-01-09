@@ -16,7 +16,7 @@ int main(int argc, char **argv){
     VideoCapture cap(argv[1]); 
     
     CascadeClassifier facedetect;
-    facedetect.load("\\haarcascades\\haarcascade_frontalface_default.xml");
+    facedetect.load("haarcascades/haarcascade_frontalface_default.xml");
 
     // Check if camera opened successfully
     if(!cap.isOpened()){
