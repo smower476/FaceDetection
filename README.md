@@ -23,11 +23,11 @@ Download and build [OpenCV](https://docs.opencv.org/4.x/d3/d52/tutorial_windows_
 
 ```
 git clone https://github.com/smower476/FaceDetection
-  cd FaceDetection
+cd FaceDetection
 mkdir build
 cd build
 cmake ..
-make main
+cmake --build . --config Release
 ```
 Or you can build it using Visual Studio and CMake.
 ## How to use:
