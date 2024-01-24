@@ -29,7 +29,7 @@ cd build
 cmake ..
 make main
 ```
-
+Or you can build it using Visual Studio and CMake.
 ## How to use:
 1. Copy a videp file and mask (png file) in the same directory with main.exe.
 2. Drag&Drop video file to main.exe.
