@@ -10,7 +10,7 @@ https://github.com/smower476/FaceDetection/assets/121474491/a42c8f76-ee90-4ae8-8
 
 ### CMake
 
-Download and install the [CMake]([https://developer.nvidia.com/cuda-downloads](https://cmake.org/download/)) 3.18 or above for your corresponding platform.
+Download and install the [CMake](https://cmake.org/download/) 3.18 or above for your corresponding platform.
 
 ### CUDA Toolkit
 Download and install the [CUDA Toolkit 12.3](https://developer.nvidia.com/cuda-downloads) for your corresponding platform.
